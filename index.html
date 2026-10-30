@@ -711,6 +711,50 @@ html,body{overflow-x:hidden}
  .quote{font-size:28px!important}
 }
 @media (max-width:400px){.nav .btn.bo{display:inline-flex}.nav .btn.bo:not(.li){display:none}}
+
+/* ===== wider + larger type pass ===== */
+:root{--w:1240px}
+body{font-size:16.5px}
+.w{padding:0 48px}
+.hero{padding:96px 0 60px}
+.hgrid{grid-template-columns:1fr 360px;gap:80px}
+.name{font-size:clamp(60px,7.4vw,108px)}
+.state{font-size:18.5px;max-width:620px}
+.sec{padding:120px 0 20px}
+.sh h2{font-size:clamp(42px,4.8vw,64px)}
+.sh p{font-size:17.5px;max-width:720px}
+.sh .intro{max-width:880px}
+.pitch{gap:64px}
+.pitch .pl p{font-size:17.5px}
+.pitch .pl .lead2{font-size:22px}
+.kpis b{font-size:46px}.kpis span{font-size:14px}
+.now h4{font-size:16px}.now p{font-size:13.5px}
+.why b{font-size:46px}.why h4{font-size:16px}.why p{font-size:13.5px}
+.school h3{font-size:20px}.school .dg{font-size:15.5px}.school li{font-size:15px}
+.chips span{font-size:12.5px}
+.feat .bd{padding:32px 38px}
+.feat h3{font-size:26px}.feat .who{font-size:14px}.feat .q{font-size:21px}.feat p{font-size:16px}
+.spec b{font-size:30px}.spec span{font-size:13px}.emb{font-size:14px}
+.row h4{font-size:18.5px}.row p{font-size:15.5px}.row .m b{font-size:34px}.row .m span{font-size:13px}
+.tile h3{font-size:21px!important}.tile p{font-size:15.5px!important}.tile .sub{font-size:11.5px}.tags span{font-size:11.5px}
+.tile .fig{height:140px!important}
+/* impact emphasis */
+.irow{grid-template-columns:230px 1fr 1.1fr;gap:36px;padding:30px 12px}
+.irow .v b{font-size:46px!important}.irow .v span{font-size:14.5px;color:var(--ink2)}
+.irow h3{font-size:22px}.irow .rl{font-size:15px;font-weight:500}.irow .ds{font-size:15px}
+.irow li{font-size:15.5px;color:var(--ink2)}
+.irow li .hl,.irow .hl{color:var(--gold2);font-weight:500}
+.irow{border-left:2px solid transparent;transition:background .3s,border-color .3s}
+.irow:hover{border-left-color:var(--gold)}
+.rc h3{font-size:19px}.rc p{font-size:14.5px}.rc .big{font-size:44px}
+.rli b{font-size:16px}.rli span{font-size:14px}
+.ev .y{font-size:34px}.ev h4{font-size:18px}.ev p{font-size:15px}
+.tl{max-width:1000px}
+.quote{font-size:clamp(34px,3.6vw,50px)!important}
+.ctext{font-size:16.5px}.cl span{font-size:15px}
+@media (max-width:1080px){.hgrid{grid-template-columns:1fr 300px;gap:48px}.irow{grid-template-columns:1fr!important}}
+@media (max-width:900px){.edu,.feat,.rows,.pgrid,.irows,.rgrid,.rlist,.cgrid{max-width:720px}}
+@media (max-width:680px){.w{padding:0 20px}.kpis b,.why b{font-size:32px}.irow .v b{font-size:38px!important}.feat h3{font-size:22px}}
 </style>
 </head>
 <body>
@@ -1071,12 +1115,12 @@ const PROJ=[
   cards:[['The idea','Simulate the garden, then act on the simulation.'],['The build','Live sensors + forecast → automated decisions.'],['Recognition','Regional 1st, State 3rd.']]}
 ];
 const IMPACT=[
- {v:'49.6%',vs:'rebound-pain problem we target',yr:'2023 – present',t:'Corsaryn Recovery',rl:'Founding Member · Co-Lead Systems Architect',ds:'Healthcare recovery-orchestration platform for clinical deployment',b:['Architecting the AI / temporal-inference engine and secure workflows','NSF SBIR/STTR Digital Health project pitch submitted']},
- {v:'$30–100',vs:'per device vs $5,000+ alternatives',yr:'2025 – present',t:'EyeNova',rl:'Co-Founder',ds:'Nonprofit open-hardware engineering lab',b:['Built a sub-$100 assistive vision wearable','Trained student engineers in Python and computer vision']},
- {v:'3,000+',vs:'audience across states',yr:'9+ years',t:'ISKCON Louisville',rl:'Music Director · Web Lead',ds:'Revived the youth music program',b:['Helped raise $10,000+','Built and runs the official website and outreach platform']},
- {v:'$5,000+',vs:'raised · 500+ volunteers',yr:'Nonprofit',t:'The Mango Care Foundation, Inc.',rl:'Executive VP',ds:'International nonprofit across 3 countries',b:['Delivered 150+ care packages to hospitalized children','Partnered with Kosair for Children and Cincinnati Children’s']},
- {v:'$2,000+',vs:'B2B revenue',yr:'2024 – 2025',t:'FrostHaven',rl:'Technical & Sales Lead',ds:'B2B e-commerce venture',b:['Built the storefront and API fulfillment integrations','Drove direct sales outreach']},
- {v:'NASA',vs:'Space Apps Challenge',yr:'Current',t:'NASA Space Apps Louisville',rl:'Local Lead',ds:'Directing Louisville’s NASA hackathon chapter',b:['Leads participant recruitment and event operations']}
+ {v:'49.6%',vs:'rebound-pain problem we target',yr:'2023 – present',t:'Corsaryn Recovery',rl:'Founding Member · Co-Lead Systems Architect',ds:'Healthcare recovery-orchestration platform for clinical deployment',b:['Architecting the <span class="hl">AI / temporal-inference engine</span> and secure clinical workflows','<span class="hl">NSF SBIR/STTR</span> Digital Health project pitch submitted']},
+ {v:'$30–100',vs:'per device vs $5,000+ alternatives',yr:'2025 – present',t:'EyeNova',rl:'Co-Founder',ds:'Nonprofit open-hardware engineering lab',b:['Built a <span class="hl">sub-$100 assistive vision wearable</span> for blind and low-vision users','Trained a cohort of <span class="hl">student engineers</span> in Python and computer vision']},
+ {v:'3,000+',vs:'audience across states',yr:'9+ years',t:'ISKCON Louisville',rl:'Music Director · Web Lead',ds:'Revived the youth music program',b:['Helped raise <span class="hl">$10,000+</span> for the community','Built and runs the official website: <span class="hl">163 devices</span> in month one']},
+ {v:'$5,000+',vs:'raised · 500+ volunteers',yr:'Nonprofit',t:'The Mango Care Foundation, Inc.',rl:'Executive VP',ds:'International nonprofit across 3 countries',b:['Delivered <span class="hl">150+ care packages</span> to hospitalized children','Partnered with <span class="hl">Kosair for Children</span> and <span class="hl">Cincinnati Children’s</span>']},
+ {v:'$2,000+',vs:'B2B revenue',yr:'2024 – 2025',t:'FrostHaven',rl:'Technical & Sales Lead',ds:'B2B e-commerce venture',b:['Built the storefront and <span class="hl">API fulfillment integrations</span>','Drove direct sales to <span class="hl">$2,000+ in B2B revenue</span>']},
+ {v:'NASA',vs:'Space Apps Challenge',yr:'Current',t:'NASA Space Apps Louisville',rl:'Local Lead',ds:'Directing Louisville’s NASA hackathon chapter',b:['Leads Louisville’s chapter of <span class="hl">NASA’s global hackathon</span>','Owns participant recruitment and event operations']}
 ];
 const RECOG=[['Institutional','Henry Vogt Scholarship','$64K','4-year award for academic achievement, leadership & innovation'],['Federal','Congressional App Challenge','3rd','Louisville district · featured by WDRB News'],['National','Broadcom MASTERS','Nat’l','National qualifier · 1st place at state']];
 const RLIST=[['TSA National Finalist','Webmaster 6th · Debate 10th nationally · State Champion, Webmaster'],['2× State Debate Champion','TOC Digital National Qualifier'],['Valedictorian','duPont Manual High School'],['Governor’s Scholars Program','Selective statewide program'],['Science Fair Winner','Top regional/state placement every year · Regional 1st, State 3rd'],['Gold Key Award','Recognized for outstanding work'],['Seal of Biliteracy','Trilingual: Hindi, Punjabi, Spanish'],['Taekwondo Black Belt','International competitor']];
